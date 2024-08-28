@@ -33,9 +33,7 @@ const Organisation = () => {
     
         setValidated(true);
       };
-    const handleOnClick = () => {
-        navigate('/verifyaccount');
-    }
+
     return (
         <div className='signup-body '>
             <div className='d-flex justify-content-center'>
@@ -55,7 +53,7 @@ const Organisation = () => {
                                             </Col>
                                         )}
                                     </Row>
-                                    <Button type='button' onClick={handleOnClick} className='btn btn-dark mt-2 w-100' label="Create Account" />
+                                    <Button type='button'  className='btn btn-dark mt-2 w-100' label="Create Account" />
 
                                 </div>
                             </Col>
