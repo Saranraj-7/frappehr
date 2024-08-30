@@ -1,4 +1,4 @@
-import React, { } from 'react';
+import React, { useState } from 'react';
 import { Card, Col, Form, Row } from 'react-bootstrap';
 import Button from '../Components/Button/Button';
 import CustomInput from '../Components/Input/CustomInput';
@@ -7,6 +7,7 @@ import { Link, useNavigate } from 'react-router-dom';
 
 
 const Login = () => {
+    const[validated,setValidated]=useState(false);
     const navigate = useNavigate();
 
     const handleClick = () => {
@@ -20,7 +21,7 @@ const Login = () => {
 
     return (
         <div className='vh-100 d-flex align-items-center signup-body  justify-content-center'>
-            <Form  >
+            <Form  validated={validated}>
                 <Card className='p-4 ms-5 bg-white me-5 shadow rounded'  >
 
                     <Row>
@@ -30,7 +31,7 @@ const Login = () => {
                             </div>
 
                             {inputs.map(item => (
-                                <CustomInput className='fw-bold login-input' key={item.label} label={item.label} />
+                                <CustomInput className='fw-bold login-input' key={item.label} label={item.label} required />
                             ))}
                             <Button onClick={handleClick} className='btn btn-success  mt-2 login-input' label="Login" />
 

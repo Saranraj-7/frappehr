@@ -12,7 +12,7 @@ const Signup = () => {
         navigate('/organisation')
     }
     const inputs = [
-
+        {label : "Sitename"},
         { label: "Firstname" },
         { label: "Lastname" },
         { label: "Email" },

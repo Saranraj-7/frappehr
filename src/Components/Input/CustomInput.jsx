@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const CustomInput = ({ label, type = 'text', placeholder, ariaLabel, className })=> {
+const CustomInput = ({ label, type = 'text', placeholder, ariaLabel, className,required })=> {
     return (
         <div className={className}>
             <div className='fs-6 '>{label}</div>
@@ -12,6 +12,7 @@ const CustomInput = ({ label, type = 'text', placeholder, ariaLabel, className }
                     aria-label={ariaLabel} 
                     placeholder={placeholder} 
                     aria-describedby="basic-addon1"
+                    required={required}
                 />
             </label>
         </div>
